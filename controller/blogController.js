@@ -1,4 +1,4 @@
-const blog=require('../model/postModel');
+const blog=require('../model/blogModel');
 exports.postBlog=(req,res)=>{
     const {content,thumbImage,heading}=req.body
     
