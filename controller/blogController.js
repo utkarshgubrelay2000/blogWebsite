@@ -2,7 +2,7 @@ const blog=require('../model/blogModel');
 exports.postBlog=(req,res)=>{
     const {content,thumbImage,heading}=req.body
     
-let blogId=heading.replace(/\s/g," ")
+let blogId=heading.replace(/\s/g,"-")
    let newBog=new blog({
        heading:heading,content:content,thumbImage:thumbImage, blogId: blogId
    })
@@ -14,7 +14,7 @@ let blogId=heading.replace(/\s/g," ")
 }
 exports.editBlog=(req,res)=>{
     const {content,thumbImage,heading}=req.body
-    let blogId=heading.replace(/\s/g," ")
+    let blogId=heading.replace(/\s/g,"-")
    blog.findByIdAndUpdate(req.params.id,{ heading:heading,content:content,thumbImage:thumbImage
     , blogId: blogId}).then(saved=>{
         res.json('Updated')

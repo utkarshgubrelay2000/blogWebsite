@@ -12,10 +12,7 @@ const adminSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  mobile: {
-    required: true,
-    type: Number,
-  },
+ 
 });
 
 const admin = mongoose.model("blogAdmin", adminSchema);

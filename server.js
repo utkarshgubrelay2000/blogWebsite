@@ -9,10 +9,6 @@ var authRouter = require('./routes/Auth');
 var blogRouter = require('./routes/blog');
 
 
-
-
-
-
 mongoose.connect(process.env.MONGO_URL,{
   useNewUrlParser:true,
   useUnifiedTopology:true
