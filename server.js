@@ -6,6 +6,8 @@ const mongoose=require('mongoose')
 require("dotenv").config({path:"./config/config.env"});
 const bodyParser = require('body-parser');
 var authRouter = require('./routes/Auth');
+var blogRouter = require('./routes/blog');
+
 
 
 
@@ -37,6 +39,7 @@ app.get('/', function(req, res, next) {
 });
 // Auth Routers
 app.use('/',authRouter)
+app.use('/',blogRouter)
 
 
 
