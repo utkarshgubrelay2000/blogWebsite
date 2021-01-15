@@ -24,7 +24,7 @@ To start the express server, run the following
 npm run start:dev
 ```
 
-Open [http://localhost:4500](http://localhost:4500) and take a look around.
+Open [http://localhost:4000](http://localhost:4000) and take a look around.
 ## Api's-->>>>>
 
 
@@ -46,29 +46,3 @@ Open [http://localhost:4500](http://localhost:4500) and take a look around.
    ######  
   ###### Response:{student saved succesfully}
   ##### important:validation applied 
-
-   ###  forgot password->
-   ###### Request type-: Post,
-   ######  Url:url/forgot,
-   ######  Body-include-: {
-   ######  email  }
-   ######  
-  ###### Response:{otp:otp}
- 
-  ####  verify-Otp->
-   ###### Request type-: Post,
-   ######  Url:url/verify-Otp,
-   ######  Body-include-: {
-   ###### otp  }
-   ######  
-  ###### Response:{resetToken}
-
- ####  reset-password->
-   ###### Request type-: Post,
-   ######  Url:url/reset-password,
-   ######  Body-include-: {
-   ###### resetToken,password  }
-   ######  
-  ###### Response:{"succes"}
-
-  
